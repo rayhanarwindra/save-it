@@ -8,19 +8,22 @@ Save-it is a budgeting app which helps users in planning out their monthly expen
 
      `javac MainApplication.java`
      
- 2. Run MainApplication
+ 2. Run MainApplication  
+ 
     `java MainApplication`
 
 ### Tests
 
- 1. Navigate To Test Module
+ 1. Navigate To Test Module  
+ 
 	 `cd Test`
 
- 3. Compile MainApplication.java
+ 3. Compile MainTest.java
 
      `javac MainTest.java`
      
- 4. Run MainApplication
+ 4. Run MainTest  
+ 
     `java MainTest`
 
 
