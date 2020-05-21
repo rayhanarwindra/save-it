@@ -21,6 +21,18 @@ public class User {
         this.method = Method.parseMethod(method);
     }
 
+    public int getIncome(){
+        return this.income;
+    }
+
+    public int getSavings(){
+        return this.savings;
+    }
+
+    public int getGoal(){
+        return this.goal;
+    }
+    
     public void calculateBudget(){
         this.budget = method.calculateBudget(this.income);
     }

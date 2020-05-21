@@ -14,25 +14,40 @@ public class MainApplication {
         System.out.println("We're here to help you in achieving your most desired financial goals.");
         System.out.println("First, we need to collect your current financial status.");
 
-        System.out.println("How much do you make in a month?");
-        int income = scanner.nextInt();
+        int income = initIncome();
 
-        System.out.println("How much money do you have in your savings account?");
-        int savings = scanner.nextInt();
+        int savings = initSavings();
 
-        System.out.println("Finally, how much does it cost to achieve your goal?");
-        int goal = scanner.nextInt();
+        int goal = initGoal();
 
-        System.out.println("Great! One more thing, how do you wish to save in order to achieve your goal?");
-        System.out.println(" 1. Traditional \n 2. Minimalist \n 3. Frugal");
-        System.out.println("Please input one number from the above list (Default: 1)");
-
-        int methodChoice = scanner.nextInt();
-        String method = chooseMethod(methodChoice);
+        String method = initMethod();
 
         user = new User(income, savings, goal, method);
 
         scanner.close();
+    }
+
+    public static int initIncome(){
+        System.out.println("How much do you make in a month?");
+        return scanner.nextInt();
+    }
+
+    public static int initSavings(){
+        System.out.println("How much money do you have in your savings account?");
+        return scanner.nextInt();
+    }
+
+    public static int initGoal(){
+        System.out.println("Finally, how much does it cost to achieve your goal?");
+        return scanner.nextInt();
+    }
+
+    public static String initMethod(){
+        System.out.println("Great! Before you get your results, how do you wish to save in order to achieve your goal?");
+        System.out.println(" 1. Traditional \n 2. Minimalist \n 3. Frugal");
+        System.out.println("Please input one number from the above list (Default: 1)");
+
+        return chooseMethod(scanner.nextInt());
     }
 
     public static String chooseMethod(int methodChoice){

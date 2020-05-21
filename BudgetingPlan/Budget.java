@@ -15,6 +15,22 @@ public class Budget {
         this.timeCalculator = new TimeCalculator();
     }
 
+    public int getSave(){
+        return this.save;
+    }
+
+    public int getInvest(){
+        return this.invest;
+    }
+
+    public int getWants(){
+        return this.wants;
+    }
+
+    public int getNeeds(){
+        return this.needs;
+    }
+    
     public int calculateTime(int savings, int goal){
         return this.timeCalculator.calculateTime(savings, goal, save, invest);
     }
