@@ -28,6 +28,8 @@ public class BudgetTest {
 
         budget = method.calculateBudget(10000000);
 
+        System.out.println(budget.toString());
+
         if (expectedSave == budget.getSave() && expectedInvest == budget.getInvest() && expectedWants == budget.getWants() && expectedNeeds == budget.getNeeds()){
             System.out.println("Test passed");
         }
@@ -47,6 +49,8 @@ public class BudgetTest {
 
         budget = method.calculateBudget(10000000);
 
+        System.out.println(budget.toString());
+
         if (expectedSave == budget.getSave() && expectedInvest == budget.getInvest() && expectedWants == budget.getWants() && expectedNeeds == budget.getNeeds()){
             System.out.println("Test passed");
         }
@@ -65,6 +69,8 @@ public class BudgetTest {
         expectedNeeds = 2500000;
 
         budget = method.calculateBudget(10000000);
+
+        System.out.println(budget.toString());
 
         if (expectedSave == budget.getSave() && expectedInvest == budget.getInvest() && expectedWants == budget.getWants() && expectedNeeds == budget.getNeeds()){
             System.out.println("Test passed");

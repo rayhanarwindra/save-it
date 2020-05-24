@@ -12,6 +12,8 @@ public class UserTest {
         int goal = 3000000;
 
         user = new User (1000000, 2000000, 3000000, "Traditional");
+
+        System.out.println(user.toString());
         
         if (user.getIncome() == income && user.getSavings() == savings && user.getGoal() == goal){
             System.out.println("Test passed");
