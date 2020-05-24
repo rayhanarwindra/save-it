@@ -14,6 +14,8 @@ public class MainApplication {
         System.out.println("We're here to help you in achieving your most desired financial goals.");
         System.out.println("First, we need to collect your current financial status.");
 
+        pressEnter();
+        
         int income = initIncome();
 
         int savings = initSavings();
@@ -24,7 +26,10 @@ public class MainApplication {
 
         user = new User(income, savings, goal, method);
 
-        scanner.close();
+        user.calculateBudget();
+        user.calculateTime();
+
+        inputLoop();
     }
 
     public static int initIncome(){
@@ -64,5 +69,38 @@ public class MainApplication {
             default:
                 return "Traditional";
         }
+    }
+
+    public static void inputLoop(){
+        int option;
+        do {
+            printOptions();
+            option = scanner.nextInt();
+            switch (option){
+                case 1:
+                    System.out.println(user.toString());
+                    pressEnter();
+                    break;
+                case 2:
+                    user.printBudget();
+                    pressEnter();
+                    break;
+            }
+        }
+        while (option != 3);
+
+        scanner.close();
+    }
+
+    public static void printOptions(){
+        System.out.println("Pick an option...");
+        System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Exit app");
+        user.printTime();
+    }
+
+    public static void pressEnter(){
+        System.out.println("Press any key to continue...");
+        scanner.nextLine();
+        scanner.nextLine();
     }
 }

@@ -34,5 +34,13 @@ public class Budget {
     public int calculateTime(int savings, int goal){
         return this.timeCalculator.calculateTime(savings, goal, save, invest);
     }
+
+    @Override
+    public String toString(){
+        return "You should save " + this.save 
+        + "\nand invest " + this.invest 
+        + ".\nYou should spend " + this.needs +" on your needs, and\n"
+        + this.wants + " on your wants";
+    }
     
 }

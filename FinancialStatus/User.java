@@ -41,5 +41,22 @@ public class User {
         this.time = budget.calculateTime(this.savings,this.goal);
     }
 
+    public void printBudget(){
+        System.out.println(budget.toString());
+    }
+
+    public void printTime(){
+        String output = (time <= 0) ? 
+        "Congratulations! You've achieved your goal!" : "You will achieve your goal in " + time +" months.";
+
+        System.out.println(output);
+    }
+
+    @Override
+    public String toString(){
+        return "Your monthly income is " + this.income
+        + ",\nyour current savings is " + this.savings
+        + ",\nand your financial goal is " + this.goal;
+    }
 
 }
