@@ -14,7 +14,8 @@ public class MainApplication {
         System.out.println("We're here to help you in achieving your most desired financial goals.");
         System.out.println("First, we need to collect your current financial status.");
 
-        pressEnter();
+        System.out.println("Press enter to continue...");
+        scanner.nextLine();
         
         int income = initIncome();
 
@@ -85,21 +86,34 @@ public class MainApplication {
                     user.printBudget();
                     pressEnter();
                     break;
+                case 3:
+                    System.out.println("Input your new financial goal: ");
+                    user.setGoal(scanner.nextInt());
+
+                    break;
+                case 4:
+                    System.out.println("Please choose a new method:");
+                    System.out.println(" 1. Traditional \n 2. Minimalist \n 3. Frugal");
+
+                    String method = chooseMethod(scanner.nextInt());
+                    user.setMethod(method);
+
+                    break;
             }
         }
-        while (option != 3);
+        while (option != 5);
 
         scanner.close();
     }
 
     public static void printOptions(){
         System.out.println("Pick an option...");
-        System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Exit app");
+        System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Change goal \n 4. Change budgeting method \n 5. Exit app");
         user.printTime();
     }
 
     public static void pressEnter(){
-        System.out.println("Press any key to continue...");
+        System.out.println("Press enter to continue...");
         scanner.nextLine();
         scanner.nextLine();
     }

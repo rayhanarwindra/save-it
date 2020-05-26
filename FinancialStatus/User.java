@@ -32,6 +32,18 @@ public class User {
     public int getGoal(){
         return this.goal;
     }
+
+    public void setGoal(int goal){
+        this.goal = goal;
+        calculateBudget();
+        calculateTime();
+    }
+
+    public void setMethod(String method){
+        this.method = Method.parseMethod(method);
+        calculateBudget();
+        calculateTime();
+    }
     
     public void calculateBudget(){
         this.budget = method.calculateBudget(this.income);
