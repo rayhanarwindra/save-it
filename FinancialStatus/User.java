@@ -33,6 +33,10 @@ public class User {
         return this.goal;
     }
 
+    public Budget getBudget(){
+        return this.budget;
+    }
+
     public void setGoal(int goal){
         this.goal = goal;
         calculateBudget();

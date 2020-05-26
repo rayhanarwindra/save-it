@@ -21,5 +21,18 @@ public class UserTest {
         else{
             System.out.println("Test failed");
         }
+
+        System.out.println("Changing goal...");
+
+        int newGoal = 40000000;
+
+        user.setGoal(newGoal);
+
+        if (user.getGoal() == newGoal){
+            System.out.println("Test passed");
+        }
+        else{
+            System.out.println("Test failed");
+        }
     }
 }
