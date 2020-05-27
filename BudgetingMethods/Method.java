@@ -19,5 +19,5 @@ public abstract class Method {
         }
     }
 
-    public abstract Budget calculateBudget(int income);
+    public abstract Budget calculateBudget(long income);
 }

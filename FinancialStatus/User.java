@@ -4,16 +4,16 @@ import BudgetingMethods.*;
 import BudgetingPlan.Budget;
 
 public class User {
-    private int income;
-    private int savings;
+    private long income;
+    private long savings;
 
-    private int goal;
+    private long goal;
     private Method method;
 
     private Budget budget;
     private int time;
 
-    public User (int income, int savings, int goal, String method){
+    public User (long income, long savings, long goal, String method){
         this.income = income;
         this.savings = savings;
         this.goal = goal;
@@ -21,15 +21,15 @@ public class User {
         this.method = Method.parseMethod(method);
     }
 
-    public int getIncome(){
+    public long getIncome(){
         return this.income;
     }
 
-    public int getSavings(){
+    public long getSavings(){
         return this.savings;
     }
 
-    public int getGoal(){
+    public long getGoal(){
         return this.goal;
     }
 
@@ -37,7 +37,7 @@ public class User {
         return this.budget;
     }
 
-    public void setGoal(int goal){
+    public void setGoal(long goal){
         this.goal = goal;
         calculateBudget();
         calculateTime();

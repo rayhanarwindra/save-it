@@ -17,11 +17,11 @@ public class MainApplication {
         System.out.println("Press enter to continue...");
         scanner.nextLine();
         
-        int income = initIncome();
+        long income = initIncome();
 
-        int savings = initSavings();
+        long savings = initSavings();
 
-        int goal = initGoal();
+        long goal = initGoal();
 
         String method = initMethod();
 
@@ -33,19 +33,19 @@ public class MainApplication {
         inputLoop();
     }
 
-    public static int initIncome(){
+    public static long initIncome(){
         System.out.println("How much do you make in a month?");
-        return scanner.nextInt();
+        return Long.parseLong(scanner.nextLine());
     }
 
-    public static int initSavings(){
+    public static long initSavings(){
         System.out.println("How much money do you have in your savings account?");
-        return scanner.nextInt();
+        return Long.parseLong(scanner.nextLine());
     }
 
-    public static int initGoal(){
+    public static long initGoal(){
         System.out.println("Finally, how much does it cost to achieve your goal?");
-        return scanner.nextInt();
+        return Long.parseLong(scanner.nextLine());
     }
 
     public static String initMethod(){
@@ -88,7 +88,7 @@ public class MainApplication {
                     break;
                 case 3:
                     System.out.println("Input your new financial goal: ");
-                    user.setGoal(scanner.nextInt());
+                    user.setGoal(scanner.nextLong());
 
                     break;
                 case 4:
@@ -102,7 +102,7 @@ public class MainApplication {
             }
         }
         while (option != 5);
-
+    
         scanner.close();
     }
 

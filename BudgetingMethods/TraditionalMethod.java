@@ -2,7 +2,7 @@ package BudgetingMethods;
 import BudgetingPlan.Budget;
 
 public class TraditionalMethod extends Method{
-    public Budget calculateBudget(int income){
+    public Budget calculateBudget(long income){
         int save =(int) Math.round(income * 0.025);
         int invest =(int) Math.round(income * 0.025);
 

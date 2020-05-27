@@ -1,14 +1,14 @@
 package BudgetingPlan;
 
 public class TimeCalculator {
-    public int calculateTime(int savings, int goal, int save, int invest){
+    public int calculateTime(long savings, long goal, long save, long invest){
         int invested = 0;
         int time = 0;
 
         return calculateTimeRec(savings, goal, save, invest, invested, time);
     }
 
-    private int calculateTimeRec(int savings, int goal, int save, int invest, int invested, int time){
+    private int calculateTimeRec(long savings, long goal, long save, long invest, int invested, int time){
         if (savings >= goal * 2){
             return time;
         }

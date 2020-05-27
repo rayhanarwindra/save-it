@@ -2,7 +2,7 @@ package BudgetingMethods;
 import BudgetingPlan.Budget;
 
 public class MinimalistMethod extends Method {
-    public Budget calculateBudget(int income){
+    public Budget calculateBudget(long income){
         int save =(int) Math.round(income * 0.05);
         int invest =(int) Math.round(income * 0.1);
 

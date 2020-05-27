@@ -1,13 +1,13 @@
 package BudgetingPlan;
 
 public class Budget {
-    private int save;
-    private int invest;
-    private int wants;
-    private int needs;
+    private long save;
+    private long invest;
+    private long wants;
+    private long needs;
     private TimeCalculator timeCalculator;
 
-    public Budget(int save, int invest, int wants, int needs){
+    public Budget(long save, long invest, long wants, long needs){
         this.save = save;
         this.invest = invest;
         this.wants = wants;
@@ -15,23 +15,23 @@ public class Budget {
         this.timeCalculator = new TimeCalculator();
     }
 
-    public int getSave(){
+    public long getSave(){
         return this.save;
     }
 
-    public int getInvest(){
+    public long getInvest(){
         return this.invest;
     }
 
-    public int getWants(){
+    public long getWants(){
         return this.wants;
     }
 
-    public int getNeeds(){
+    public long getNeeds(){
         return this.needs;
     }
     
-    public int calculateTime(int savings, int goal){
+    public int calculateTime(long savings, long goal){
         return this.timeCalculator.calculateTime(savings, goal, save, invest);
     }
 
