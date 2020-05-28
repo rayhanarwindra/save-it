@@ -8,7 +8,7 @@ public class TimeCalculator {
         return calculateTimeRec(savings, goal, save, invest, invested, time);
     }
 
-    private int calculateTimeRec(long savings, long goal, long save, long invest, int invested, int time){
+    private int calculateTimeRec(long savings, long goal, long save, long invest, long invested, int time){
         if (savings >= goal * 2){
             return time;
         }
@@ -17,7 +17,7 @@ public class TimeCalculator {
 
         invested += invest;
 
-        invested = (int) Math.round(invested + (invested * 0.005));
+        invested = Math.round(invested + (invested * 0.005));
 
         savings += invested;
 

@@ -1,5 +1,7 @@
 package BudgetingPlan;
 
+import static Utilities.CurrencyFormatter.rupiahFormat;
+
 public class Budget {
     private long save;
     private long invest;
@@ -37,10 +39,10 @@ public class Budget {
 
     @Override
     public String toString(){
-        return "You should save " + this.save 
-        + "\nand invest " + this.invest 
-        + ".\nYou should spend " + this.needs +" on your needs, and\n"
-        + this.wants + " on your wants";
+        return "You should save " + rupiahFormat(this.save) 
+        + "\nand invest " + rupiahFormat(this.invest) 
+        + ".\nYou should spend " + rupiahFormat(this.needs) +" on your needs, and\n"
+        + rupiahFormat(this.wants) + " on your wants";
     }
     
 }

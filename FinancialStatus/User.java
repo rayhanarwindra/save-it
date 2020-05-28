@@ -2,6 +2,7 @@ package FinancialStatus;
 
 import BudgetingMethods.*;
 import BudgetingPlan.Budget;
+import static Utilities.CurrencyFormatter.rupiahFormat;
 
 public class User {
     private long income;
@@ -70,9 +71,9 @@ public class User {
 
     @Override
     public String toString(){
-        return "Your monthly income is " + this.income
-        + ",\nyour current savings is " + this.savings
-        + ",\nand your financial goal is " + this.goal;
+        return "Your monthly income is " + rupiahFormat(this.income)
+        + ",\nyour current savings is " + rupiahFormat(this.savings)
+        + ",\nand your financial goal is " + rupiahFormat(this.goal);
     }
 
 }

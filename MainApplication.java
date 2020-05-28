@@ -35,17 +35,17 @@ public class MainApplication {
 
     public static long initIncome(){
         System.out.println("How much do you make in a month?");
-        return Long.parseLong(scanner.nextLine());
+        return Long.parseLong(scanner.nextLine(), 10);
     }
 
     public static long initSavings(){
         System.out.println("How much money do you have in your savings account?");
-        return Long.parseLong(scanner.nextLine());
+        return Long.parseLong(scanner.nextLine(), 10);
     }
 
     public static long initGoal(){
         System.out.println("Finally, how much does it cost to achieve your goal?");
-        return Long.parseLong(scanner.nextLine());
+        return Long.parseLong(scanner.nextLine(), 10);
     }
 
     public static String initMethod(){

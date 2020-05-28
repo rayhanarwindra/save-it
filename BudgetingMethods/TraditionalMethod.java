@@ -3,11 +3,11 @@ import BudgetingPlan.Budget;
 
 public class TraditionalMethod extends Method{
     public Budget calculateBudget(long income){
-        int save =(int) Math.round(income * 0.025);
-        int invest =(int) Math.round(income * 0.025);
+        long save = Math.round(income * 0.025);
+        long invest = Math.round(income * 0.025);
 
-        int wants = (int) Math.round(income * 0.4);
-        int needs = (int) Math.round(income * 0.55);
+        long wants = Math.round(income * 0.4);
+        long needs = Math.round(income * 0.55);
 
         return new Budget(save, invest, wants, needs);
     }
