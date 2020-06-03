@@ -58,15 +58,15 @@ public class User {
         this.time = budget.calculateTime(this.savings,this.goal);
     }
 
-    public void printBudget(){
-        System.out.println(budget.toString());
+    public String printBudget(){
+        return this.budget.toString();
     }
 
-    public void printTime(){
+    public String printTime(){
         String output = (time <= 0) ? 
         "Congratulations! You've achieved your goal!" : "You will achieve your goal in " + time +" months.";
 
-        System.out.println(output);
+        return output;
     }
 
     @Override
@@ -75,5 +75,4 @@ public class User {
         + ",\nyour current savings is " + rupiahFormat(this.savings)
         + ",\nand your financial goal is " + rupiahFormat(this.goal);
     }
-
 }

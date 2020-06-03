@@ -83,7 +83,7 @@ public class MainApplication {
                     pressEnter();
                     break;
                 case 2:
-                    user.printBudget();
+                    System.out.println(user.printBudget());
                     pressEnter();
                     break;
                 case 3:
@@ -109,7 +109,7 @@ public class MainApplication {
     public static void printOptions(){
         System.out.println("Pick an option...");
         System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Change goal \n 4. Change budgeting method \n 5. Exit app");
-        user.printTime();
+        System.out.println(user.printTime());
     }
 
     public static void pressEnter(){
