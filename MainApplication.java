@@ -14,8 +14,7 @@ public class MainApplication {
         System.out.println("We're here to help you in achieving your most desired financial goals.");
         System.out.println("First, we need to collect your current financial status.");
 
-        System.out.println("Press enter to continue...");
-        scanner.nextLine();
+        pressEnterOneNextLine();
         
         long income = initIncome();
 
@@ -99,22 +98,38 @@ public class MainApplication {
                     user.setMethod(method);
 
                     break;
+                case 5:
+                    System.out.println("Please insert the name of the file you wish to save to:");
+                    scanner.nextLine();
+
+                    String fileName = scanner.nextLine() + ".txt";
+                    user.saveToFile(fileName);
+
+                    System.out.println("Succesfully saved to " + fileName);
+                    pressEnterOneNextLine();
+
+                    break;
             }
         }
-        while (option != 5);
+        while (option != 6);
     
         scanner.close();
     }
 
     public static void printOptions(){
         System.out.println("Pick an option...");
-        System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Change goal \n 4. Change budgeting method \n 5. Exit app");
+        System.out.println(" 1. See financial status \n 2. See budget plan \n 3. Change goal \n 4. Change budgeting method \n 5. Save to file \n 6. Exit app");
         System.out.println(user.printTime());
     }
 
     public static void pressEnter(){
         System.out.println("Press enter to continue...");
         scanner.nextLine();
+        scanner.nextLine();
+    }
+
+    public static void pressEnterOneNextLine(){
+        System.out.println("Press enter to continue...");
         scanner.nextLine();
     }
 }

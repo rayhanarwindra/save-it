@@ -34,5 +34,7 @@ public class UserTest {
         else{
             System.out.println("Test failed");
         }
+
+        user.saveToFile("test.txt");
     }
 }

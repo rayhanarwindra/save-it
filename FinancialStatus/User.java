@@ -3,6 +3,7 @@ package FinancialStatus;
 import BudgetingMethods.*;
 import BudgetingPlan.Budget;
 import static Utilities.CurrencyFormatter.rupiahFormat;
+import static Utilities.FilePrinter.printToFile;
 
 public class User {
     private long income;
@@ -74,5 +75,11 @@ public class User {
         return "Your monthly income is " + rupiahFormat(this.income)
         + ",\nyour current savings is " + rupiahFormat(this.savings)
         + ",\nand your financial goal is " + rupiahFormat(this.goal);
+    }
+
+    public void saveToFile(String fileName){
+        String buffer = "\n=========================\n";
+        String content = this.toString() + buffer + this.printBudget() + buffer + this.printTime();
+        printToFile(fileName, content);
     }
 }
