@@ -65,7 +65,7 @@ public class MainApplication {
         long goal;
         while (true){
             try{
-                System.out.println("How much money do you have in your savings account?");
+                System.out.println("How much money does it cost to achieve your goal?");
                 goal = Long.parseLong(scanner.nextLine(), 10);
                 break;
             } catch(NumberFormatException e){
@@ -113,8 +113,7 @@ public class MainApplication {
                     System.out.println(user.printBudget());
                     pressEnter();
                     break;
-                case 3:
-                
+                case 3:        
                     long goal;
                     scanner.nextLine();
                     while (true){
