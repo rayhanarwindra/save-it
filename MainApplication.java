@@ -1,5 +1,6 @@
 import FinancialStatus.User;
 import java.util.Scanner;
+import java.lang.NumberFormatException;
 public class MainApplication {
     private static User user;
     private static Scanner scanner;
@@ -33,18 +34,45 @@ public class MainApplication {
     }
 
     public static long initIncome(){
-        System.out.println("How much do you make in a month?");
-        return Long.parseLong(scanner.nextLine(), 10);
+        long income;
+        while (true){
+            try{
+                System.out.println("How much do you make in a month?");
+                income = Long.parseLong(scanner.nextLine(), 10);
+                break;
+            } catch(NumberFormatException e){
+                System.out.println("Please input a number.");
+            }
+        } 
+        return income;
     }
 
-    public static long initSavings(){
-        System.out.println("How much money do you have in your savings account?");
-        return Long.parseLong(scanner.nextLine(), 10);
+    public static long initSavings() throws NumberFormatException{
+        long savings;
+        while (true){
+            try{
+                System.out.println("How much money do you have in your savings account?");
+                savings = Long.parseLong(scanner.nextLine(), 10);
+                break;
+            } catch(NumberFormatException e){
+                System.out.println("Please input a number.");
+            }
+        } 
+        return savings;
     }
 
     public static long initGoal(){
-        System.out.println("Finally, how much does it cost to achieve your goal?");
-        return Long.parseLong(scanner.nextLine(), 10);
+        long goal;
+        while (true){
+            try{
+                System.out.println("How much money do you have in your savings account?");
+                goal = Long.parseLong(scanner.nextLine(), 10);
+                break;
+            } catch(NumberFormatException e){
+                System.out.println("Please input a number.");
+            }
+        } 
+        return goal;
     }
 
     public static String initMethod(){
@@ -86,9 +114,20 @@ public class MainApplication {
                     pressEnter();
                     break;
                 case 3:
-                    System.out.println("Input your new financial goal: ");
-                    user.setGoal(scanner.nextLong());
-
+                
+                    long goal;
+                    scanner.nextLine();
+                    while (true){
+                        try{
+                            System.out.println("Input your new financial goal: ");
+                            goal = Long.parseLong(scanner.nextLine(), 10);
+                            break;
+                        } catch(NumberFormatException e){
+                            System.out.println("Please input a number.");
+                        }
+                    } 
+                    
+                    user.setGoal(goal);
                     break;
                 case 4:
                     System.out.println("Please choose a new method:");
